@@ -9,6 +9,7 @@ int main() {
     printf("Enter income: ");
     scanf("%d", &income);
 
+    //tax if statem
     if (income <= 9275) {
         tax = income * 0.12;
     } else if (income <= 37650) {
@@ -22,10 +23,13 @@ int main() {
     }
     printf("Tax due = $%.2f\n", tax);
     
-    clear_input_buffer();
+    //clear_input_buffer();
+    //this didnt really work lol
+
     printf("Enter the number of dependents (0 for none): ");
     scanf(" %d", &dependents);
 
+        //depenedents if statem
     if (dependents == 0) {
         credit = 0;
     } else if (dependents <= 5) {
@@ -35,6 +39,7 @@ int main() {
     }
     printf("Tax credit: $%d\n", credit);
 
+    // calc adjusted tax with tax - credit
     float adjustedTax = tax - credit;
     printf("Adjusted Tax = $%.2f\n", adjustedTax);
     
